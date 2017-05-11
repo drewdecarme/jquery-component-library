@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1" transform="translate(-192.000000, -134.000000)">
+            <g id="Group-4" transform="translate(193.000000, 134.000000)">
+                <g id="Group-5">
+                    <polygon id="Triangle-1" stroke="#FFA700" fill="#FFA700" points="10 0 20 20 0 20 "></polygon>
+                    <g id="Rectangle-48-+-Rectangle-47-Copy" transform="translate(9.000000, 8.000000)" fill="#FFF">
+                        <rect id="Rectangle-48" x="0" y="7" width="2" height="2"></rect>
+                        <rect id="Rectangle-47" x="0" y="0" width="2" height="6"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

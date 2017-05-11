@@ -1,0 +1,208 @@
+$full-dark: rgb(108, 109, 110)
+$semi-dark: rgb(143, 144, 145)
+$semi-light: rgb(244, 245, 246)
+$full-light: rgb(255, 255, 255)
+
+$color-primary-2: #7CC7AF
+
+$selected: rgb(218, 219, 220)
+
+
+$transStd: all .2s ease-in-out
+
+table
+	width: 100%
+	border: none
+	border-collapse: collapse
+
+	& > thead
+		background: $full-dark
+
+		& > tr
+			background: inherit
+
+			& > th
+				background: inherit
+				border-bottom: 1px solid #d1d1d1
+				font-weight: 200
+				padding: 20px 0 20px 20px
+				text-align: left
+				color: #FFF
+
+				&:not(:last-child)
+					border-right: 1px solid $semi-light
+
+				&.sortable
+					position: relative
+
+				&.sortable:hover
+					cursor: pointer
+
+				&.sortable::after,
+				&.sortable::before
+					content: ''
+					position: absolute
+					width: 20px
+					right: 10px
+					width: 0 
+					height: 0
+
+				&.sortable::after
+					border-left: .4em solid transparent
+					border-right: .4em solid transparent
+					border-top: .4em solid $full-light
+					top: 60%
+					margin-top: -.25em
+
+				&.sortable::before
+					border-left: .4em solid transparent
+					border-right: .4em solid transparent
+					border-bottom: .4em solid $full-light
+					bottom: 60%
+					margin-bottom: -.25em 
+
+				&.sortable.descending::after
+					border-left: .4em solid transparent
+					border-right: .4em solid transparent
+					border-top: .4em solid $color-primary-2
+					top: 60%
+					margin-top: -.25em
+
+				&.sortable.descending::before
+					border-left: .4em solid transparent
+					border-right: .4em solid transparent
+					border-bottom: .4em solid $full-light
+					bottom: 60%
+					margin-bottom: -.25em
+
+				&.sortable.ascending::after
+					border-left: .4em solid transparent
+					border-right: .4em solid transparent
+					border-top: .4em solid $full-light
+					top: 60%
+					margin-top: -.25em
+
+				&.sortable.ascending::before
+					border-left: .4em solid transparent
+					border-right: .4em solid transparent
+					border-bottom: .4em solid $color-primary-2
+					bottom: 60%
+					margin-bottom: -.25em
+
+				
+
+		& > tr:nth-child(2) > th
+			padding: 10px
+			text-align: center
+
+			& > input[type="text"]
+				font-family: OpenSans
+				border: 1px solid $semi-light
+				width: 90%
+				box-sizing: border-box
+				border-radius: 3px
+				transition: $transStd
+				padding: 5px 10px
+				font-size: 16px
+				font-weight: 100
+
+				&:focus
+					outline: none
+					border: 1px solid $color-primary-2
+					transition: $transStd
+
+
+	& > tbody
+		width: 100%
+
+		& > tr
+			background: #FFF
+
+			&:nth-child(2n + 1)
+				background: $semi-light
+
+			& > td
+				padding: 14px 20px
+				text-align: left
+
+				&:not(:last-child)
+					border-right: 1px solid $semi-dark
+
+				&.money
+					text-align: right
+
+					&:before
+						content: '$'
+
+			&:hover
+				cursor: pointer
+				transition: $transStd
+				color: $full-light
+				background: $color-primary-2
+
+
+ul.pagination
+	padding: 20px 0
+	margin: 0
+	list-style-type: none
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+
+	& > li
+		position: relative
+
+		&:first-child
+			margin-right: 20px
+
+		&:last-child
+			margin-left: 20px
+
+		& > a
+			transition: $transStd
+			display: inline-block
+			text-decoration: none
+			color: $full-dark
+			padding: 5px 8px
+			background-color: $semi-light
+			border-radius: 2px
+			cursor: pointer
+
+			&:hover
+				background-color: $semi-dark
+				transition: $transStd
+				color: $full-light
+
+			&:active,
+			&.current-page
+				background: $color-primary-2
+				color: $full-light
+
+			&[disabled="disabled"]
+				background: none
+				color: #d1d1d1
+
+		&.pages > a:not(:last-child)
+			margin-right: 5px
+
+
+.inline-highlight
+	display: inline-block
+
+	&.offRed
+		background: #ff6b6b
+
+	&.purple
+		background: #9A9CEC
+	
+
+
+
+
+
+	
+
+
+
+
+

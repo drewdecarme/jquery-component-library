@@ -1,0 +1,141 @@
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">Iniline Input Validators</div>
+            <div class="subtitle">Just becuase it sucks writing client side validators over and over again...</div>
+        </div>
+        <div class="right">
+            <div class="tag"></div>
+        </div>
+    </div>
+    <div class="content description">
+        <p>Coder’s are notoriously lazy in their craft and I’m definitely no exception. I was getting really tired of writing the same code over and over again to check the validity of inputs. So in order to appease future Drew’s coding laziness, present Drew decided to develop a validator class that would take care of all of future Drew's checks for him (after some configuration of course).</p>
+
+        <p>I tackled 3 of the major input types; Text, Number, and Text (email). I started out first by defining what I wanted to configure or check, and then wrote the script to accommodate my desires.</p>
+
+        <p>When initializing the inputs, the configuration object calls for a type and then you have the ability to add your arguments. Each configuration allows you to customize the value as well as if an error text will show. I added the option for defining messages because, well, it’s boring having system default messages. It just gives the inputs a little bit of personality… if they can even have that.</p>
+
+        <p>To make it easier when submitting, if the value that is entered passes all of the predefined tests, a data attribute of "data-valid" is set to true on the input. If the input doesn't pass all of the tests, the "data-valid" attribute is set to false.</p>
+
+        <p>I plan on building this out and making it even more robust, but for now... this.</p>
+
+        <p><span>Numbers</span><br>
+        I decided that checking for minimum, maximum, and length were the best starting points. To help me restrict user input, I used the HTML5 input type of number as my markup benchmark. (Yes, I know, it’s not perfect… but only because for some dumb reason Internet Explorer still exists).</p>
+
+        <p><span>Text</span><br>
+        This was pretty straight forward just because for most implementations, the only things you want to check when you submit your form are value length (server/API restrictions) and if it’s defined. </p>
+
+        <p><span>Email</span><br>
+        This input type simply checks to see if the email is "well formed". I didn’t know this going in, but there is an INSANE amount of documentation and opinions on the web-o-sphere for what exactly denotes a “well formed” email. Type in “well formed email” into Google and you get over 7 million results. I just landed on the standard described in <a href="https://tools.ietf.org/html/rfc5322#section-3.4">RFC 5322</a> because, honestly, if you’re using an email that doesn’t have an @ symbol in it, you’re either up to no good or your just doing it wrong. </p>
+
+    </div>
+</div>
+<div class="brick">
+    <div class="block">
+        <div class="header">
+            <div class="left">
+                <div class="title">Working Example</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="input-container stacked">
+                <div class="input input-number">
+                    <label for="val-num">Numeric Validator</label>
+                    <input type="number" id="val-num">
+                </div>
+                <div class="input input-text">
+                    <label for="val-text">Text Validator</label>
+                    <input type="text" id="val-text">
+                </div>
+                <div class="input input-text validate">
+                    <label for="val-email">Email Validator</label>
+                    <input type="text" id="val-email" data-type="email">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="header">
+            <div class="left">
+                <div class="title">Markup</div>
+            </div>
+        </div>
+        <div class="content syntax">
+            <pre class="language-markup">
+                <code>
+                    <div class="input-container stacked">
+                        <div class="input input-number">
+                            <label for="val-num">Numeric Validator</label>
+                            <input type="number" id="val-num">
+                        </div>
+                        <div class="input input-text">
+                            <label for="val-text">Text Validator</label>
+                            <input type="text" id="val-text">
+                        </div>
+                        <div class="input input-text validate">
+                            <label for="val-email">Email Validator</label>
+                            <input type="text" id="val-email">
+                        </div>
+                    </div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">Confguration</div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="content syntax">
+        <pre class="language-javascript">
+            <code>
+                // NUMBER
+                $('#val-num').validator({
+                    type: 'number',
+                    min: {
+                        value: 0,
+                        showError: true,
+                        errorText: "Neagative numbers? Really? Let's keep it above 0 please. Thanks!"
+                    },
+                    max: {
+                        value: 10,
+                        showError: true,
+                        errorText: 'Getting a little ambitious I see... Less than 10 please!'
+                    },
+                    length: {
+                        value: 4,
+                        showError: true,
+                        errorText: 'WOAHH! Your entry is wayyyy too long. Enter in less than 5 digits'
+                    }
+                })
+
+                // TEXT
+                $('#val-text').validator({
+                    type: 'text',
+                    length: {
+                        value: 10,
+                        showError: true,
+                        errorText: 'Keep your verbosity to a minimum please. Exactly 10 characters of a minimum.'
+                    }
+                })
+
+                // EMAIL
+                $('#val-email').validator({
+                    type: 'email'
+                })
+            </code>
+        </pre>
+    </div>
+</div>
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">JavaScript</div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="content syntax render" data-url="./scripts/validator.js"></div>
+</div>

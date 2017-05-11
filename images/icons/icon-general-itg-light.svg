@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="19px" viewBox="0 0 17 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1" transform="translate(-115.000000, -107.000000)">
+            <g id="Group-Copy-2" transform="translate(114.000000, 107.000000)">
+                <g id="Line-+-Line-+-icon-+-icon-copy-2" transform="translate(1.000000, 7.000000)">
+                    <path d="M5.99614145,1.35515474 L15.7398713,1.35515474" id="Line" stroke="#F0F0F0" stroke-width="0.675" stroke-linecap="square"></path>
+                    <path d="M5.99614145,3.16202772 L13.4913183,3.16202772" id="Line" stroke="#F0F0F0" stroke-width="0.675" stroke-linecap="square"></path>
+                    <g id="icon-+-icon-copy-2" transform="translate(0.374759, 0.000000)" fill="#F0F0F0">
+                        <polygon id="icon" points="0.499678454 3.65057837 3.12473921 0 3.65464821 0.737343166 1.02983729 4.38792154"></polygon>
+                        <polygon id="icon-copy" transform="translate(2.077163, 2.193961) scale(-1, 1) translate(-2.077163, -2.193961) " points="0.499678454 3.65057837 3.12473921 0 3.65464821 0.737343166 1.02983729 4.38792154"></polygon>
+                    </g>
+                </g>
+                <g id="Line-Copy-8-+-Line-Copy-6-+-icon-+-icon-copy-3" transform="translate(1.000000, 0.000000)">
+                    <path d="M5.99614145,1.35515474 L15.7398713,1.35515474" id="Line-Copy-8" stroke="#F0F0F0" stroke-width="0.675" stroke-linecap="square"></path>
+                    <path d="M5.99614145,3.16202772 L13.4913183,3.16202772" id="Line-Copy-6" stroke="#F0F0F0" stroke-width="0.675" stroke-linecap="square"></path>
+                    <g id="icon-+-icon-copy-3" transform="translate(0.374759, 0.000000)" fill="#F0F0F0">
+                        <polygon id="icon" points="0.499678454 3.65057837 3.12473921 0 3.65464821 0.737343166 1.02983729 4.38792154"></polygon>
+                        <polygon id="icon-copy" transform="translate(2.077163, 2.193961) scale(-1, 1) translate(-2.077163, -2.193961) " points="0.499678454 3.65057837 3.12473921 0 3.65464821 0.737343166 1.02983729 4.38792154"></polygon>
+                    </g>
+                </g>
+                <g id="icon-+-Line-+-Line" transform="translate(1.000000, 14.000000)">
+                    <path d="M2.07705998,3.02046141 L4.24901573,0 L4.77892473,0.737343166 L2.15411381,4.38792154 L2.07703841,4.28072532 L2.00021285,4.38757406 L0.37475884,2.12689798 L0.904667841,1.38990229 L2.07705998,3.02046141 Z" id="icon" fill="#F0F0F0"></path>
+                    <path d="M5.99614145,1.35515474 L15.7398713,1.35515474" id="Line" stroke="#F0F0F0" stroke-width="0.675" stroke-linecap="square"></path>
+                    <path d="M5.99614145,3.16202772 L13.4913183,3.16202772" id="Line" stroke="#F0F0F0" stroke-width="0.675" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

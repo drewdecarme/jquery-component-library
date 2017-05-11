@@ -1,0 +1,123 @@
+
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">Client Side Pagination</div>
+            <div class="subtitle">Let the client do the work... Servers are slow</div>
+        </div>
+        <div class="right">
+            <div class="tag"></div>
+        </div>
+    </div>
+    <div class="content description">
+        <p>When I was working with GE Healthcare, I worked on an application that returned a massive amount of data from one of our Oracle implementations' staging environments. Since I couldn’t massage the data on the back end, I needed a way to present the data on the front end without making the user break their mouse's scroll wheel.</p>
+		
+		<p>I figured the best way to go about that was to create a pagination plugin on the front end. Since it goes against my morale fabric to develop non-reusable code, I decided to create a pagination plugin to help manage the records. The only requirement was that the user needed the ability to manage how many records they wanted to see per page.</p>
+		
+		<p>I developed the plugin by extending jQuery to the selector of the table and storing its data through the <a href="https://api.jquery.com/data/" target="_blank">$.data()</a> method. This way, I could initialize it up front, and then access the class that is created by just referencing the selectors data. It also allows me to attach data to the selector in a way that is safe from circular references and therefore from memory leaks. (stole that line from the documentation).</p>
+		
+		<p>I also wanted the ability to give a finite amount of pages in the pagination. Simply put, if there were 10,000 records, I didn’t want to display 1 thru 100 in the pagination buttons. I restricted the pagination to only display 5 numbers and then update dynamically based upon where the user was in the pages. This way the user could only see 5 numbers at a time.</p>
+
+		<p>Check it out below.</p>
+
+		<p>PS - I created the table CSS using Sass just because looking at a webkit table SUCKS.</p>
+    </div>
+</div>
+<div class="block">
+	<div class="header">
+		<div class="left">
+			<div class="title">Working Example</div>
+		</div>
+	</div>
+	<div class="content">
+		<table id="sample-table">
+			<thead>
+				<tr>
+					<th class="sortable ascending">Name</th>
+					<th class="sortable">Position</th>
+					<th>Office</th>
+					<th>Extension</th>
+					<th>Start Date</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+</div>
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">Markup</div>
+        </div>
+    </div>
+    <div class="content syntax">
+        <pre class="language-markup">
+            <code>
+            <!-- The body of the table is appended dynamically to the DOM by iterating through a parsed object returned using a simple jQuery AJAX call. 
+I thought it would be a little overkill to put the entire body of the table inside the markup sample. Honestly, I'm lazy and its less scrolling -->
+<table id="sample-table">
+					<thead>
+						<tr>
+							<th class="sortable ascending">Name</th>
+							<th class="sortable">Position</th>
+							<th>Office</th>
+							<th>Extension</th>
+							<th>Start Date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+            </code>
+        </pre>
+    </div>
+</div>
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">Confguration</div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="content syntax">
+        <pre class="language-javascript">
+            <code>
+            	$('#sample-table').paginate({
+				    rows: 10
+				});
+            </code>
+        </pre>
+    </div>
+</div>
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">JavaScript</div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="content syntax render" data-url="./scripts/pagination.js"></div>
+</div>
+<script type="text/javascript">
+	
+	$.get( "./scripts/tableObject.js", function( data ) {
+		var obj = JSON.parse(data);
+		var tableBody = $('#sample-table').find('tbody');
+		for (var i = 0; i < obj.length; i++) {
+			tableBody.append('\
+				<tr>\
+					<td>' + obj[i].name + '</td>\
+					<td>' + obj[i].position + '</td>\
+					<td>' + obj[i].office + '</td>\
+					<td>' + obj[i].extn + '</td>\
+					<td>' + obj[i].start_date + '</td>\
+					<td class="money">' + obj[i].salary + '.00</td>\
+				</tr>\
+				')
+		}
+
+	});
+
+</script>
+

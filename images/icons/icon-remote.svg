@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="19px" height="58px" viewBox="0 0 19 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon set one</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="19" height="58" rx="9.5"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="19" height="58" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-set-one" transform="translate(-92.000000, -886.000000)">
+            <g id="Group" transform="translate(92.000000, 886.000000)">
+                <ellipse id="Oval-24" fill="#FFFFFF" cx="9.5" cy="9.52857143" rx="2.06521739" ry="2.07142857"></ellipse>
+                <use id="Rectangle-197" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="4.13043478" y="17.4" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="12.3913043" y="17.4" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="8.26086957" y="17.4" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="4.13043478" y="21.5428571" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="12.3913043" y="21.5428571" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="8.26086957" y="21.5428571" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="4.13043478" y="25.6857143" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="12.3913043" y="25.6857143" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="8.26086957" y="25.6857143" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="4.13043478" y="42.2571429" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="12.3913043" y="42.2571429" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="8.26086957" y="42.2571429" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="8.26086957" y="32.3142857" width="2.47826087" height="3.31428571" rx="0.5"></rect>
+                <rect id="Rectangle-183" fill="#FFFFFF" x="8.26086957" y="37.2857143" width="2.47826087" height="2.48571429" rx="0.5"></rect>
+                <rect id="Rectangle-192" fill="#FFFFFF" x="4.13043478" y="32.3142857" width="2.47826087" height="7.45714286" rx="0.600000024"></rect>
+                <rect id="Rectangle-192" fill="#FFFFFF" x="12.3913043" y="32.3142857" width="2.47826087" height="7.45714286" rx="0.600000024"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

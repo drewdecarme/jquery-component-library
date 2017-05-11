@@ -1,0 +1,212 @@
+// ************** COLOR PALLET ***************************************
+$full-dark: rgb(108, 109, 110)
+$semi-dark: rgb(143, 144, 145)
+$semi-light: rgb(244, 245, 246)
+$full-light: rgb(255, 255, 255)
+
+
+$color-primary-3: #00A972
+$color-primary-2: #7CC7AF
+$selected: rgb(218, 219, 220)
+
+
+
+
+$transStd: all .2s ease-in-out
+$transBackground: background-image .2s ease-in-out
+
+
+
+// ************** COLOR PALLET ***************************************
+.input
+	position: relative
+	margin-bottom: 10px
+	width: 100%
+
+	& > label
+		display: block
+		margin-bottom: 5px
+		font-size: 16px
+		font-weight: 200
+		cursor: pointer
+
+	& > input[type="text"],
+	& > input[type="number"]
+		border: 1px solid $semi-dark
+		width: inherit
+		box-sizing: border-box
+		border-radius: 3px
+		transition: $transStd
+		padding: 7px
+		font-size: 16px
+		font-weight: 100
+		width: 100%
+
+		&:focus
+			outline: none
+			border: 1px solid $color-primary-3
+			transition: $color-primary-3
+
+		&::-webkit-input-placeholder
+			color: #d1d1d1
+			font-family: OpenSans
+		&::-moz-placeholder
+			color: #d1d1d1
+			font-family: OpenSans
+		&:-ms-input-placeholder
+			color: #d1d1d1
+			font-family: OpenSans
+		&:-moz-placeholder
+			color: #d1d1d1
+			font-family: OpenSans
+
+	& > input[type=number]::-webkit-inner-spin-button, 
+	& >	input[type=number]::-webkit-outer-spin-button
+		-webkit-appearance: none
+		margin: 0
+
+		
+
+	&.error > input
+		border: 1px solid #AA3939 !important
+		transition: $transStd
+
+		&:focus
+			border: 1px solid #AA3939 !important
+			transition: $transStd
+		
+
+	& > .inline-error-text
+		color: #AA3939
+		font-weight: 200
+		font-size: 12px
+		margin-top: 5px
+
+	&.input.validate
+		position: relative
+		width: 90%
+
+		&::after
+			content: ''
+			position: absolute
+			top: 24px
+			right: -30px
+			bottom: 0
+			width: 20px
+			transition: $transBackground
+
+		&.validate-error
+			position: relative
+
+			& > input
+				border: 1px solid #AA3939 !important
+				transition: $transStd
+
+			&::after
+				transition: $transBackground
+				background: url(../images/icons/icon-alert-error-dark.svg) center / contain no-repeat
+
+		&.validate-success
+
+			& > input
+				border: 1px solid rgb(21, 159, 19) !important
+				transition: $transStd
+
+			&::after
+				transition: $transBackground
+				background: url(../images/icons/icon-alert-success-dark.svg) center / contain no-repeat
+
+
+	&.input-search
+		position: relative
+
+		& > label
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			width: 30px
+			margin: 0
+			background: url(../images/icons/icon-forms-search.svg) center no-repeat
+			background-size: 50%
+
+		& > input[type="text"],
+		& > input[type="number"]
+			padding-left: 30px
+
+			&:focus + label
+				background: url(../images/icons/icon-forms-search-green.svg) center no-repeat
+				background-size: 50%
+
+	&.input-search.error
+		position: relative
+
+		& > label
+			bottom: 22px
+			background-size: 50%
+			background: url(../images/icons/icon-forms-search-error.svg) center no-repeat
+
+
+
+ul.type-ahead-results
+	position: absolute
+	top: calc(100% - 2px)
+	left: 0
+	right: 0
+	background: $full-light
+	list-style-type: none
+	margin: 0
+	padding: 10px 0
+	border-right: 1px solid $color-primary-3
+	border-left: 1px solid $color-primary-3
+	border-bottom: 1px solid $color-primary-3
+	border-bottom-left-radius: 3px
+	border-bottom-right-radius: 3px
+	z-index: 100
+
+	& > li
+		padding: 10px 10px 10px 30px
+
+		& > a
+			display: block
+			text-decoration: none
+			color: $full-dark
+			transition: $transStd
+
+			& > span.typeahead-strong
+				font-weight: 300
+				text-decoration: underline
+
+		&:hover
+			cursor: pointer
+			transition: $transStd
+			background: $color-primary-2
+
+		&:hover > a
+			color: #FFF !important
+			transition: $transStd
+
+	& > li.active
+		cursor: pointer
+		transition: $transStd
+		background: $color-primary-2
+
+		& > a
+			color: #FFF
+			transition: $transStd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

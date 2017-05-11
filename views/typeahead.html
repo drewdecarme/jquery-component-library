@@ -1,0 +1,118 @@
+
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">Typeahead Search</div>
+            <div class="subtitle">Type what you want, get what is provided</div>
+        </div>
+        <div class="right">
+            <div class="tag"></div>
+        </div>
+    </div>
+    <div class="content description">
+        <p>This was one of the first and more complex components that I wrote and I did it for 2 reasons:
+            <ol>
+                <li>I wanted to dig in deep to really understand how I could componentize some common UI elements and this was one of the more useful components on form entry</li>
+                <li>A couple of offshore colleagues nuked the one that we were using and we needed a new one</li>
+            </ol>
+        </p>
+
+        <p>Like many of the components that I’ve written, I had to start somewhere so I did a quick Google search and decided that I wanted to base it off of the <a href="https://github.com/bassjobsen/Bootstrap-3-Typeahead/blob/master/bootstrap3-typeahead.js" target="_blank">Boostrap typeahead</a> widget. I’m not a big fan of adding plugins to any solution for the following:
+            <ol>
+                <li>It’s hard to customize it to the needs of the application without nuking it</li>
+                <li>They usually end up being pretty meaty and the developer almost never uses all of the configurations/options</li>
+                <li>It's damn near impossible to debug and do it properly without again, nuking the component</li>
+            </ol>
+       </p>
+
+        <p>I gutted what I needed and began building. I decided on adding options to define the source (AJAX or pre-defined array), configuring the number of results that appeared, the style and color of the matched element, and then adding a callback because quite honestly, most of the times you use this component the user is expecting a dynamic result. </p>
+
+        <p>The component uses a combination of jQuery and regular JavaScript both on the local variable definitions as well as the custom definitions on the its prototype. In simplest pseudo code terms, it searches the returned or provided array of possible values, matches the characters (case sensitive), then combines them back with a span. After it’s all done doing that “stuff”, it uses a series of listeners to show, hide, select, or error out. </p>
+
+        <p>Check it out below</p>
+
+    </div>
+</div>
+<div class="brick">
+	<div class="block">
+		<div class="header">
+			<div class="left">
+				<div class="title">Working Example</div>
+			</div>
+		</div>
+		<div class="content">
+            <div class="input-container">
+    			<div class="input input-search">
+                    <input type="text" name="typeahead" id="sample-type" placeholder="Try typing 'Developer'...">
+                    <label for="typeahead"></label>
+                </div>
+                <div class="input input-search">
+                    <input type="text" name="typeahead" id="sample-type-dos" placeholder="Go ahead, type something...">
+                    <label for="typeahead"></label>
+                </div>
+            </div>
+		</div>
+	</div>
+	<div class="block">
+	    <div class="header">
+	        <div class="left">
+	            <div class="title">Markup</div>
+	        </div>
+	    </div>
+	    <div class="content syntax">
+	        <pre class="language-markup">
+	            <code>
+					<div class="input input-search">
+                    <input type="text" name="typeahead" id="sample-type" placeholder="Try typing 'Developer'...">
+                    <label for="typeahead"></label>
+                </div>
+                <div class="input input-search">
+                    <input type="text" name="typeahead" id="sample-type-dos" placeholder="Go ahead, type something...">
+                    <label for="typeahead"></label>
+                </div>
+	            </code>
+	        </pre>
+	    </div>
+	</div>
+</div>
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">Confguration</div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="content syntax">
+        <pre class="language-javascript">
+            <code>
+// Example Uno
+var typeahead = $('#sample-type').typeahead({
+    sourceUrl: './scripts/typeAheadArr.js',    // URL of of the AJAX call which will return the array. This or the below is required
+    // values: [],  // Instead of providing a source, the values can be initalized as an array using this key value pair. This or the above is required
+    results: 5,     // number of results requested to be shown at once. Defaults to 10
+    style: 'strong',   // style of the matched string (CSS Classes can be added). Defaults to "strong"
+    color: '#2e2e2e',   // color of the matched string. Defaults to "#2E2E2E"
+    callback: function(){   // a callback function to be called after selecting an option. Defaults to false
+        alert('Obligatory callback...')
+    }
+});
+
+// Example Dos
+var typeahead = $('#sample-type-dos').typeahead({
+    sourceUrl: './scripts/typeAheadArr.js',
+    results: 10,
+    style: 'strong',
+    color: '#ff6b6b',
+});         </code>
+        </pre>
+    </div>
+</div>
+<div class="block">
+    <div class="header">
+        <div class="left">
+            <div class="title">JavaScript</div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="content syntax render" data-url="./scripts/typeahead.js"></div>
+</div>

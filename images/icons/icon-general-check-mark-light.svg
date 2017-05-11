@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 2 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Auth-Flow-360:-Trial---Cold-Auth" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="EIN-Auth-SecondaryAuth-EnteredContent_Correct-CreatePin-NoPrimaryUser" sketch:type="MSArtboardGroup" transform="translate(-567.000000, -469.000000)" fill="#FFFFFF">
+            <g id="Last-four-digits-of-SSN" sketch:type="MSLayerGroup" transform="translate(360.000000, 417.000000)">
+                <g id="Group-Copy-4" transform="translate(30.500000, 1.000000)" sketch:type="MSShapeGroup">
+                    <g id="Oval-73-+-Fill-2-Copy" transform="translate(172.500000, 46.000000)">
+                        <path d="M8.16111015,14.0740741 C7.9914258,14.0740741 7.82816889,14.0050799 7.70604758,13.8840146 L4.63244699,10.7714656 C4.38177693,10.5176191 4.38177693,10.1049558 4.63244699,9.85110925 C4.88311705,9.59726272 5.29061658,9.59726272 5.54128664,9.85110925 L8.15853917,12.5028291 L14.4587134,6.11631082 C14.7093834,5.86246429 15.1155975,5.86246429 15.367553,6.11631082 C15.6182231,6.37015735 15.6182231,6.78282068 15.367553,7.03666721 L8.61360174,13.8840146 C8.49533689,14.0050799 8.33207998,14.0740741 8.16111015,14.0740741" id="Fill-2-Copy"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

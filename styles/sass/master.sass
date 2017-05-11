@@ -1,0 +1,202 @@
+// ************** COLOR PALLET ***************************************
+$color-primary-0: #37AA84	// Main Primary color */
+$color-primary-1: #CAD6D2
+$color-primary-2: #7CC7AF
+$color-primary-3: #00A972
+$color-primary-4: #008157
+
+$backgroundGrey: #eaeaea
+
+
+$transitionHover: all .25s ease-in-out
+
+$standardText: #2e2e2e
+
+
+// ************** COLOR PALLET ***************************************
+*
+	box-sizing: border-box
+
+body
+	width: 100%
+	height: 100vh
+	padding: 0
+	margin: 0
+	display: flex
+	align-content: strech
+	overflow-y: hidden
+
+#side,
+#main
+
+#side
+	width: 20%
+	height: inherit
+	background-color: $color-primary-0
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+	& > li
+		margin: 0
+		padding: 0
+
+		& > a
+			padding: 20px
+			display: block
+			text-decoration: none
+			color: #FFF
+			transition: $transitionHover
+			background: $color-primary-0
+			font-size: 14px
+			font-weight: 200
+
+			&:hover,
+				color: $color-primary-4
+				transition: $transitionHover
+				background: $color-primary-2
+
+			&.active
+				transition: $transitionHover
+				background: $backgroundGrey
+				color: $color-primary-4
+
+			&.link-header
+				background: #FFF
+				font-weight: 300
+				text-align: center
+				color: $color-primary-4
+				height: 60px
+
+
+#main
+	width: 80%
+	background: $backgroundGrey
+	position: relative
+	overflow-y: auto
+
+#header
+	position: fixed
+	width: calc(100% - 20%)
+	height: 60px
+	background: rgba(255, 255, 255, .95)
+	z-index: 10
+
+	& > .logo
+		position: relative
+		width: 100%
+		height: 100%
+		padding: 20px
+
+		& > .icon
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 20px
+			width: 155px
+			background: url(../images/logo-personal-green.png) center / contain no-repeat
+
+#content
+	padding: 70px 30px 30px 30px
+
+.block
+	background: #FFF
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50)
+	margin-top: 20px
+
+	& > .header
+		padding: 10px
+		display: flex
+		justify-content: space-between
+		font-color: $standardText
+
+		& > .left
+			& > .title
+				font-weight: 300
+				font-size: 22px
+
+			& > .subtitle
+				font-weight: 200
+				font-size: 18px
+				font-style: italic
+
+		& > .right
+
+
+	& > .content
+		padding: 0 10px 10px 10px
+
+		&.syntax
+			padding: 0
+
+			&.hide
+				display: none
+
+		&.description
+		font-weight: 100
+
+		& > p
+			font-size: 16px
+			font-weight: 100
+			margin-top: 0
+
+			& a
+				font-weight: 300
+				color: #266ECA
+				text-decoration: none
+
+			& span
+				font-weight: 300
+				text-decoration: underline
+
+		&.description > ol
+			counter-reset: item
+
+			& > li
+				display: block
+
+				&:before
+					content: counter(item) ".) "
+					counter-increment: item
+					font-weight: 300
+
+		&.introduction
+			padding: 20px 100px
+			font-weight: 100
+			text-align: center
+
+			& > h1
+				font-weight: inherit
+				font-size: 48px
+				text-align: inherit
+
+			& > p
+				font-weight: inherit
+				font-size: 18px
+				text-align: inherit
+				line-height: 26px
+
+.brick
+	margin-top: 20px
+	display: flex
+	flex-direction: row
+
+
+	& > .block
+		background: #FFF
+		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50)
+		width: 50%
+		margin-top: 0
+
+		&:not(:last-child)
+			margin-right: 20px
+
+
+pre
+	font-size: 10px
+	margin: 0
+
+
+
+	

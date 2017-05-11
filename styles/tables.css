@@ -1,0 +1,145 @@
+table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse; }
+  table > thead {
+    background: #6c6d6e; }
+    table > thead > tr {
+      background: inherit; }
+      table > thead > tr > th {
+        background: inherit;
+        border-bottom: 1px solid #d1d1d1;
+        font-weight: 200;
+        padding: 20px 0 20px 20px;
+        text-align: left;
+        color: #FFF; }
+        table > thead > tr > th:not(:last-child) {
+          border-right: 1px solid #f4f5f6; }
+        table > thead > tr > th.sortable {
+          position: relative; }
+        table > thead > tr > th.sortable:hover {
+          cursor: pointer; }
+        table > thead > tr > th.sortable::after, table > thead > tr > th.sortable::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          right: 10px;
+          width: 0;
+          height: 0; }
+        table > thead > tr > th.sortable::after {
+          border-left: 0.4em solid transparent;
+          border-right: 0.4em solid transparent;
+          border-top: 0.4em solid white;
+          top: 60%;
+          margin-top: -0.25em; }
+        table > thead > tr > th.sortable::before {
+          border-left: 0.4em solid transparent;
+          border-right: 0.4em solid transparent;
+          border-bottom: 0.4em solid white;
+          bottom: 60%;
+          margin-bottom: -0.25em; }
+        table > thead > tr > th.sortable.descending::after {
+          border-left: 0.4em solid transparent;
+          border-right: 0.4em solid transparent;
+          border-top: 0.4em solid #7CC7AF;
+          top: 60%;
+          margin-top: -0.25em; }
+        table > thead > tr > th.sortable.descending::before {
+          border-left: 0.4em solid transparent;
+          border-right: 0.4em solid transparent;
+          border-bottom: 0.4em solid white;
+          bottom: 60%;
+          margin-bottom: -0.25em; }
+        table > thead > tr > th.sortable.ascending::after {
+          border-left: 0.4em solid transparent;
+          border-right: 0.4em solid transparent;
+          border-top: 0.4em solid white;
+          top: 60%;
+          margin-top: -0.25em; }
+        table > thead > tr > th.sortable.ascending::before {
+          border-left: 0.4em solid transparent;
+          border-right: 0.4em solid transparent;
+          border-bottom: 0.4em solid #7CC7AF;
+          bottom: 60%;
+          margin-bottom: -0.25em; }
+    table > thead > tr:nth-child(2) > th {
+      padding: 10px;
+      text-align: center; }
+      table > thead > tr:nth-child(2) > th > input[type="text"] {
+        font-family: OpenSans;
+        border: 1px solid #f4f5f6;
+        width: 90%;
+        box-sizing: border-box;
+        border-radius: 3px;
+        transition: all 0.2s ease-in-out;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 100; }
+        table > thead > tr:nth-child(2) > th > input[type="text"]:focus {
+          outline: none;
+          border: 1px solid #7CC7AF;
+          transition: all 0.2s ease-in-out; }
+  table > tbody {
+    width: 100%; }
+    table > tbody > tr {
+      background: #FFF; }
+      table > tbody > tr:nth-child(2n + 1) {
+        background: #f4f5f6; }
+      table > tbody > tr > td {
+        padding: 14px 20px;
+        text-align: left; }
+        table > tbody > tr > td:not(:last-child) {
+          border-right: 1px solid #8f9091; }
+        table > tbody > tr > td.money {
+          text-align: right; }
+          table > tbody > tr > td.money:before {
+            content: "$"; }
+      table > tbody > tr:hover {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        color: white;
+        background: #7CC7AF; }
+
+ul.pagination {
+  padding: 20px 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+  ul.pagination > li {
+    position: relative; }
+    ul.pagination > li:first-child {
+      margin-right: 20px; }
+    ul.pagination > li:last-child {
+      margin-left: 20px; }
+    ul.pagination > li > a {
+      transition: all 0.2s ease-in-out;
+      display: inline-block;
+      text-decoration: none;
+      color: #6c6d6e;
+      padding: 5px 8px;
+      background-color: #f4f5f6;
+      border-radius: 2px;
+      cursor: pointer; }
+      ul.pagination > li > a:hover {
+        background-color: #8f9091;
+        transition: all 0.2s ease-in-out;
+        color: white; }
+      ul.pagination > li > a:active, ul.pagination > li > a.current-page {
+        background: #7CC7AF;
+        color: white; }
+      ul.pagination > li > a[disabled="disabled"] {
+        background: none;
+        color: #d1d1d1; }
+    ul.pagination > li.pages > a:not(:last-child) {
+      margin-right: 5px; }
+
+.inline-highlight {
+  display: inline-block; }
+  .inline-highlight.offRed {
+    background: #ff6b6b; }
+  .inline-highlight.purple {
+    background: #9A9CEC; }
+
+/*# sourceMappingURL=tables.css.map */
